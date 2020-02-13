@@ -1,0 +1,51 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required field'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please check errors below:"
+    labels:
+      course:
+        title: "Title"
+        slug: "Slug"
+        description: "Description"
+        published: "Published"
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'
+  helpers:
+    submit:
+      learner:
+        create: "Sign up"
+        update: "Save changes"
+      teacher:
+        create: "Sign up"
+        update: "Save changes"
+      topic:
+        create: "Add topic"
+        update: "Save changes"
+      course:
+        create: "Create Course"
+        update: "Update Course"

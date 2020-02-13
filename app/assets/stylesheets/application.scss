@@ -1,0 +1,15 @@
+.user-background {
+  padding-top: 70px;
+}
+
+.guest-background {
+  background: image-url("logo.jpg") no-repeat fixed;
+  background-size: cover;
+  padding-top: 16px;
+}
+
+.welcome-text {
+  p {
+    font-size: 1.5rem;
+  }
+}

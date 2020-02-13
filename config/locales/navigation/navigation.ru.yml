@@ -1,0 +1,7 @@
+ru:
+  navigation:
+    sign_in: "Войти"
+    sign_out: "Выход"
+    forgot_password: "Забыли Ваш пароль?"
+    forgot_password_submit: "Получить инструкции по восстановлению"
+    forgot_password_change: "Изменить пароль"

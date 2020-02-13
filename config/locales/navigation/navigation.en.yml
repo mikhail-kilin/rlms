@@ -1,0 +1,7 @@
+en:
+  navigation:
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    forgot_password: "Forgot your password?"
+    forgot_password_submit: "Send me reset password instructions"
+    forgot_password_change: "Change password"

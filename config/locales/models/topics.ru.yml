@@ -1,0 +1,19 @@
+ru:
+  activerecord:
+    models:
+      topic: Тема
+    attributes:
+      topic:
+        title: Название темы
+        slug: SLUG темы
+    errors:
+      models:
+        topic:
+          attributes:
+            title:
+              blank: Название темы должно быть заполнено
+              taken: Название темы уже используется
+            slug:
+              blank: SLUG темы должен быть заполнен
+              taken: SLUG темы уже используется
+

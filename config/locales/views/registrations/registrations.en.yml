@@ -1,0 +1,7 @@
+
+en:
+  registrations:
+    area_title: "Remove account"
+    text: "You can delete you account, but all you data will be deleted too: all you courses with topics and learner's progress, test results, progress reports, homeworks and all other data!"
+    button_text: "I want to remove my account with all data!"
+    confirmation: "Delete account with ALL DATA? All you data will be permanently deleted without any additional confirmations!"

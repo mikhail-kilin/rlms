@@ -1,0 +1,29 @@
+ru:
+  activerecord:
+    models:
+      learner: Учащийся
+    attributes:
+      learner:
+        first_name: Имя
+        last_name: Фамилия
+        locale: Язык интерфейса
+        email: Адрес E-Mail
+        current_password: Текущий пароль
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+    errors:
+      models:
+        learner:
+          attributes:
+            email:
+              blank: поле должно быть заполнено
+              taken: адрес уже зарегистрирован
+            first_name:
+              blank: поле должно быть заполнено
+            last_name:
+              blank: поле должно быть заполнено
+            password:
+              too_short: пароль слишком короткий
+              blank: поле должно быть заполнено
+            password_confirmation:
+              confirmation: подтверждение пароля не совпадает

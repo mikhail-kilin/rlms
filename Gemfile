@@ -9,10 +9,13 @@ gem 'puma'
 gem 'webpacker', '~> 4.0'
 
 # Views
+gem 'active_link_to'
 gem 'sass-rails', '>= 6'
+gem 'simple_form'
 gem 'slim-rails'
 
 # All other gems
+gem "devise"
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
