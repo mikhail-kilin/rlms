@@ -1,0 +1,4 @@
+- @courses.each do |course|
+  = course.title
+  = link_to "Удалить", teachers_course_path(course), method: :delete
+  br

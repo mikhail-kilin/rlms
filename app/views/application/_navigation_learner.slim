@@ -1,7 +1,7 @@
 .nav.navbar-nav
   = active_link_to "Личный кабинет", root_path, active: :exclusive, wrap_tag: :li
-  = active_link_to "Доступные курсы", learners_available_courses_path, active: :exclusive, wrap_tag: :li
-  = active_link_to "Мои курсы [#{current_learner.courses.count}]", learners_courses_path, active: :exclusive, wrap_tag: :li
+  / = active_link_to "Доступные курсы", learners_available_courses_path, active: :exclusive, wrap_tag: :li
+  / = active_link_to "Мои курсы [#{current_learner.courses.count}]", learners_courses_path, active: :exclusive, wrap_tag: :li
 ul.nav.navbar-nav.navbar-right
   li.dropdown
     a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"

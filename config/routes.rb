@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   
   namespace :teachers do
     resource :dashboard, only: :show
+    resources :courses
   end
 
   namespace :learners do

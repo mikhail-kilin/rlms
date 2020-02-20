@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   def extract_language_from_request
     language_data = request.env["HTTP_ACCEPT_LANGUAGE"]
 
-    language_data.present? ? language_data.scan(/^[a-z]{2}/).first : "en"
+    language_data.present? ? language_data.scan(/^[a-z]{2}/).first : "ru"
   end
 
   def configure_permitted_parameters
