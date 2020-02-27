@@ -11,8 +11,7 @@ feature "Sign In" do
   end
 
   scenario "As Learner I can not use admin panel" do
-    
-    learner = Learner.create(email: 'learner@example.com', first_name: 'Firstname', last_name: 'Lastname', password: 'password')
+    learner = FactoryBot.create :learner
     sign_in learner
 
     visit admin_root_path
@@ -21,8 +20,7 @@ feature "Sign In" do
   end
 
   scenario "As Teacher I can not use admin panel" do
-    
-    teacher = Teacher.create(email: 'teacher@example.com', first_name: 'Firstname', last_name: 'Lastname', password: 'password')
+    teacher = FactoryBot.create :teacher
     sign_in teacher
 
     visit admin_root_path
@@ -31,8 +29,7 @@ feature "Sign In" do
   end
 
   scenario "As Admin I can use admin panel" do
-    
-    admin = AdminUser.create(email: 'admin@example.com', password: 'password')
+    admin = FactoryBot.create :admin_user
     sign_in admin
 
     visit admin_root_path
