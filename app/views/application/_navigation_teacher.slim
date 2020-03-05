@@ -1,6 +1,7 @@
 .nav.navbar-nav
   = active_link_to "Teacher's Dashboard", root_path, active: :exclusive, wrap_tag: :li
   = active_link_to "Мои курсы", teachers_courses_path, active: :exclusive, wrap_tag: :li
+  = active_link_to "Create course", new_teachers_course_path, active: :exclusive, wrap_tag: :li
   / = active_link_to "My Courses [#{current_teacher.courses.published.count}/#{current_teacher.courses.not_published.count}]", teachers_courses_path, active: :exclusive, wrap_tag: :li
 ul.nav.navbar-nav.navbar-right
   li.dropdown

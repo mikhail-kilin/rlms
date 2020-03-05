@@ -1,0 +1,11 @@
+<h2>New topic</h2>
+<%= form_for @topic, url:  teachers_course_topics_path do |f|%>
+    <br>
+    <h3>Name of topic</h3>
+    <%= f.text_field :title %>
+    <br>
+    <h3>Description of topic</h3>
+    <%= f.text_area :description, size: "60x12" %>
+    <br>
+    <%= f.submit "Create" %>
+  <% end %>

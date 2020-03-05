@@ -1,0 +1,7 @@
+<h2>New course</h2>
+<%= form_for @course, url:  teachers_courses_path do |f|%>
+<p>Name</p>
+<%= f.text_field(:title,{:class => 'form-control'})%>
+<br>
+<%= f.submit({:class => 'btn btn-success'})%>
+<% end%>
