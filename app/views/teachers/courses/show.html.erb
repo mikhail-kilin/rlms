@@ -7,8 +7,11 @@
    <br>
    <%=topic.description %>
    <%if @course.teacher_id==current_teacher.id %>
-   <a><%= link_to "X", teachers_course_topic_path(@course, topic),method: :delete, data: {confirm:"Are you sure?"} %></a><% end %> </p> 
+   <a><%= link_to "X", teachers_course_topic_path(@course, topic),method: :delete, data: {confirm:"Are you sure?"} %></a>
    <% end %>
+   <a><%= link_to "Open topic", teachers_course_topic_path(@course, topic), :class => 'btn btn-default' %></a> 
+   <% end %>
+   
   </div> 
   <%if @course.teacher_id==current_teacher.id %>
   <%= link_to "Create topic", new_teachers_course_topic_path(@course), :class => 'btn btn-default'%>
