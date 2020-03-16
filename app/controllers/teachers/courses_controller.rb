@@ -1,5 +1,10 @@
 module Teachers
   class CoursesController < BaseController
+    before_action :set_course, only: [:show, :destroy]  
+    
+    private  def set_course
+    @course = Course.find_by_course_slug(params[:course_slug])
+  end
     
     def new
       @course = Course.new
@@ -12,14 +17,13 @@ module Teachers
 
 
     def destroy
-      @course = Course.find(params[:id])
+      @course = Course.find_by_course_slug(params[:course_slug])
       @course.destroy
-
       redirect_to teachers_courses_path
     end
 
     def show
-      @course = Course.find(params[:id])
+      @course = Course.find_by_course_slug(params[:course_slug])
   end     
 
   def create
@@ -33,7 +37,7 @@ module Teachers
   end
 
   private def course_params
-      params.require(:course).permit(:title)        
+      params.require(:course).permit(:title,:course_slug)        
   end
   end
 end

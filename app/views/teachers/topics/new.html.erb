@@ -1,11 +1,16 @@
 <h2>New topic</h2>
+<% if @topic.errors.any?%>
+<% @topic.errors.full_messages.each do |msg| %>
+  <div class='alert alert-danger'><%=msg%></div>
+<% end %>
+<% end %>
 <%= form_for @topic, url:  teachers_course_topics_path do |f|%>
     <br>
     <h3>Name of topic</h3>
-    <%= f.text_field :title %>
+    <%= f.text_field :title,prompt: :translate%>
     <br>
     <h3>Description of topic</h3>
-    <%= f.text_area :description, size: "60x12" %>
+    <%= f.text_area :description, size: "60x12", prompt: :translate %>
     <br>
     <%= f.submit "Create" %>
   <% end %>

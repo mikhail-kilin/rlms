@@ -1,7 +1,13 @@
 <h2>New course</h2>
+
 <%= form_for @course, url:  teachers_courses_path do |f|%>
 <p>Name</p>
 <%= f.text_field(:title,{:class => 'form-control'})%>
 <br>
+<% if @course.errors.any?%>
+    <% @course.errors.full_messages.each do |msg| %>
+      <div class='alert alert-danger'><%=msg%></div>
+    <% end %>
+<% end %>
 <%= f.submit({:class => 'btn btn-success'})%>
 <% end%>

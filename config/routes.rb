@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   
   namespace :teachers do
     resource :dashboard, only: :show
-    resources :courses do
-      resources :topics
+    resources :courses, param: :course_slug do
+      resources :topics,param: :topic_slug
      end
   end
 
