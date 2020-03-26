@@ -7,6 +7,7 @@ gem 'rails'
 gem 'pg'
 gem 'puma'
 gem 'webpacker', '~> 4.0'
+gem 'slug'
 
 # Views
 gem 'active_link_to'
