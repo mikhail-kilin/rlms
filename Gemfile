@@ -32,6 +32,11 @@ group :development, :test do
   gem "factory_bot_rails"
 end
 
+group :test do
+  gem "simplecov", require: false
+  gem "shoulda-matchers"
+end
+
 group :development do
   gem "dotenv-rails"
   gem "web-console", ">= 3.3.0"

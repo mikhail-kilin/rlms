@@ -11,5 +11,6 @@ FactoryBot.define do
     password_confirmation { "123456789" }
     first_name { "Firstname" }
     last_name { "Lastname" }
+    locale { "en" }
   end
 end

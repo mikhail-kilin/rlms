@@ -1,5 +1,10 @@
 require "rails_helper"
 
-RSpec.describe Course, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Course do
+  it { should have_many :topics }
+  it { should belong_to :teacher }
+
+  it { should validate_presence_of :title }
+  it { should validate_presence_of :course_slug }
+  it { should validate_presence_of :status }
 end
