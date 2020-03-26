@@ -1,0 +1,25 @@
+h1 = @course.title
+
+h2 Topics
+
+.well
+
+- @course.topics.each do |topic|
+
+  = topic.title
+
+  = topic.description
+
+  - if @course.teacher_id==current_teacher.id
+    = link_to "X", teachers_course_topic_path(@course, topic),
+      method: :delete,
+      data: { confirm:"Are you sure?" }
+
+    = link_to "Open topic", teachers_course_topic_path(@course, topic),
+      class: 'btn btn-default'
+
+- if @course.teacher_id==current_teacher.id
+  = simple_form_for [:teachers, @course, Topic.new] do |f|
+    = f.input :title
+    = f.input :description
+    = f.submit

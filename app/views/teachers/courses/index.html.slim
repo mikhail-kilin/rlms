@@ -1,7 +1,11 @@
+h2 Мои курсы
 
 - @courses.each do |course|
-  div class = 'well'
+  .well
     = course.title
-    = link_to "Удалить", teachers_course_path(course), method: :delete, :class => 'btn btn-default'
-    = link_to "Open course", teachers_course_path(course), :class => 'btn btn-default'
+    = link_to "Удалить", teachers_course_path(course),
+      method: :delete,
+      class: 'btn btn-default'
+    = link_to "Open course", teachers_course_path(course),
+      class: 'btn btn-default'
     br

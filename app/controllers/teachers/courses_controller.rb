@@ -22,6 +22,7 @@ module Teachers
 
     def show
         @course = Course.find_by_course_slug(params[:course_slug])
+        #TODO проверить, мой ли это курс!
     end
 
     def create

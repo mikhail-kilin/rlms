@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      course: "Курс"
+    attributes:
+      course:
+        course_slug: "URL курса"
+    errors:
+      models:
+        course:
+          attributes:
+            course_slug:
+              blank: "должен быть заполнен!"

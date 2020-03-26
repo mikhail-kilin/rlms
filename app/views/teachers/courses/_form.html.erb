@@ -1,6 +1,6 @@
-<%= form_for [:teachers, @course] do |form|%>
-    <%= form.text_field :title %>
-
-    <%= form.text_area :description %>
+<%= simple_form_for [:teachers, @course] do |form| %>
+    <%= form.input :title %>
+    <%= form.input :course_slug %>
+    <%= form.input :description %>
     <%= form.submit %>
 <% end %>

@@ -30,6 +30,7 @@ module Teachers
             @topic = @course.topics.new(topic_params)
             @topic.course = @course
             @topic.save
+
             redirect_to teachers_course_path(@course)
         end
 
