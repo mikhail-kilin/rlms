@@ -1,6 +1,6 @@
 ActiveAdmin.register Learner do
   permit_params :email, :password, :password_confirmation, :first_name, :last_name, :locale
-  
+
   index do
     selectable_column
     id_column

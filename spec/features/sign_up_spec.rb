@@ -27,7 +27,7 @@ feature "Sign Up" do
     fill_in :teacher_email, with: ""
     fill_in :teacher_password, with: "123123123"
     fill_in :teacher_password_confirmation, with: "123123123"
-    
+
     click_on "Регистрация"
 
     expect(page).not_to have_content("Welcome, Vladimir Bazhanov!")

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :learners
   devise_for :teachers
-  
+
   authenticated :teacher do
     root to: "teachers/dashboard#show", as: :teacher_root
   end
@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   authenticated :learner do
     root to: "learners/dashboard#show", as: :learner_root
   end
-  
+
   namespace :teachers do
     resource :dashboard, only: :show
     resources :courses, param: :course_slug do
-      resources :topics,param: :topic_slug
+      resources :topics, param: :topic_slug
      end
   end
 
@@ -25,5 +25,5 @@ Rails.application.routes.draw do
 
   get "pages/welcome"
 
-  root to: 'pages#welcome'
+  root to: "pages#welcome"
 end

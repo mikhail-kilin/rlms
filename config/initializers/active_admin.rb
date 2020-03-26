@@ -7,7 +7,7 @@ ActiveAdmin.setup do |config|
 
   config.logout_link_path = :destroy_admin_user_session_path
 
-  config.root_to = 'admin_users#index'
+  config.root_to = "admin_users#index"
 
   config.batch_actions = true
 

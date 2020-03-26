@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-  
+
   def extract_language_from_request
     language_data = request.env["HTTP_ACCEPT_LANGUAGE"]
 

@@ -1,7 +1,5 @@
 require "rails_helper"
-require 'devise'
-
-
+require "devise"
 
 feature "Sign In" do
   scenario "As guest I can not use admin panel" do

@@ -3,7 +3,7 @@ FactoryBot.define do
     "admin_#{n}@example.com"
   end
 end
-  
+
 FactoryBot.define do
   factory :admin_user do
     email { generate :admin_email }

@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -22,7 +22,7 @@ Bundler.require(*Rails.groups)
 module RLMS
   class Application < Rails::Application
     config.load_defaults 6.0
-    
+
     I18n.load_path += Dir[Rails.root.join("config", "locales", "**/*.{rb,yml}").to_s]
 
     config.generators.system_tests = nil

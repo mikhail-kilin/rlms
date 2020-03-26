@@ -1,0 +1,22 @@
+# frozen_string_literal: true
+
+# require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.6
+  DisplayCopNames: true
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - vendor/**/*
+    - tmp/**/*
+    - node_modules/**/*
+    - config/initializers/simple_form.rb
+    - config/initializers/simple_form_bootstrap.rb
+
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

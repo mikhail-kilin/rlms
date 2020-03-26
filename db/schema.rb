@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 2020_03_16_173102) do
     t.integer "teacher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "draft"
     t.string "course_slug"
     t.index ["course_slug"], name: "index_courses_on_course_slug", unique: true
-    t.string "status", default: "draft"
     t.index ["status"], name: "index_courses_on_status"
     t.index ["teacher_id"], name: "index_courses_on_teacher_id"
   end
