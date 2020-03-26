@@ -2,7 +2,10 @@
 require "spec_helper"
 
 require "simplecov"
-SimpleCov.start "rails"
+SimpleCov.start "rails" do
+  add_filter ".bundle/"
+  add_filter "app/admin"
+end
 
 ENV["RAILS_ENV"] ||= "test"
 
