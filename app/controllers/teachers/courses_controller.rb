@@ -12,9 +12,12 @@ module Teachers
 
 
     def index
-      @courses = current_teacher.courses
+      @courses = current_teacher.courses.all
     end
 
+    def new
+      @course = Course.new
+    end
 
     def destroy
       @course = Course.find_by_course_slug(params[:course_slug])
@@ -22,7 +25,7 @@ module Teachers
       redirect_to teachers_courses_path
     end
 
-    def show
+  def show
       @course = Course.find_by_course_slug(params[:course_slug])
   end     
 
@@ -36,8 +39,10 @@ module Teachers
       end
   end
 
-  private def course_params
-      params.require(:course).permit(:title,:course_slug)        
-  end
-  end
+  private
+    
+   def course_params
+      params.require(:course).permit(:title, :description, :course_slug)
+   end
+  
 end
