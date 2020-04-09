@@ -12,6 +12,8 @@ feature "Sign Up" do
     fill_in :teacher_email, with: "user@example.com"
     fill_in :teacher_password, with: "123123123"
     fill_in :teacher_password_confirmation, with: "123123123"
+    fill_in :teacher_info, with: Faker::Lorem.paragraph
+
     click_on "Регистрация"
     expect(page).to have_content("Welcome, Vladimir Bazhanov!")
   end
@@ -27,6 +29,7 @@ feature "Sign Up" do
     fill_in :teacher_email, with: ""
     fill_in :teacher_password, with: "123123123"
     fill_in :teacher_password_confirmation, with: "123123123"
+    fill_in :teacher_info, with: Faker::Lorem.paragraph
 
     click_on "Регистрация"
 

@@ -1,0 +1,12 @@
+.row
+  .col-md-4.col-md-offset-4
+    .well
+      h2
+        = "#{@teacher.first_name} #{@teacher.last_name}"
+
+      h4 Info:
+      = @teacher.info
+
+      h4 Courses:
+      ul
+        = render partial: 'course', :collection => @courses

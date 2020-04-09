@@ -11,6 +11,7 @@ FactoryBot.define do
     password_confirmation { "123456789" }
     first_name { "Firstname" }
     last_name { "Lastname" }
+    info { Faker::Lorem.paragraph }
     locale { "en" }
   end
 end

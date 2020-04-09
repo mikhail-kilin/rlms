@@ -25,5 +25,7 @@ Rails.application.routes.draw do
 
   get "pages/welcome"
 
+  resources :teacher_profile, only: :show
+
   root to: "pages#welcome"
 end
